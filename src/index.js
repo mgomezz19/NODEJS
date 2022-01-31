@@ -5,13 +5,19 @@ const users =  require('./usuario/usuarios');
 const vehiculos = require('./vehiculos/vehiculos');
 const servicios = require('./servicios/servicios');
 
+const bodyParser = require('body-parser');
+const cors = require('../node_modules/cors');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cors());
+
 //Configuraciones
 app.set('port', process.env.PORT || 3000);
 app.set('json spaces', 2);
 
 //Middleware
 app.use(morgan('dev'));
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //Rutas
