@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
 const morgan=require('morgan');
-const users =  require('./usuario/usuarios');
-const vehiculos = require('./vehiculos/vehiculos');
-const servicios = require('./servicios/servicios');
+const users =  require('../usuario/usuarios');
+const vehiculos = require('../vehiculos/vehiculos');
+const servicios = require('../servicios/servicios');
 
 const bodyParser = require('body-parser');
-const cors = require('../node_modules/cors');
+const cors = require('../../node_modules/cors');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
@@ -20,13 +20,25 @@ app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+//Swagger
+// const app = require('express')()
+const http = require('http')
+const swaggerUi = require('swagger-ui-express')
+const swaggerFile = require('./swagger_output.json')
+
+// http.createServer(app).listen(3000)
+// console.log("Listening at:// port:%s (HTTP)", 3000)
+
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+
+// require('./index.js')(app)
 //Rutas
 //app.use(require('./routes/index'));
 
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
+  host: "10.192.240.14",
   port: "3307",
   user: "Desarrollador",
   password: "12345678",
@@ -61,12 +73,14 @@ app.get('/lista_usuarios', (req, res) => users.getuserlist(con,req,res));   //es
 app.get('/usuario_por_id_usuario', (req, res) =>users.usuarioporid(con,req,res));
     
 //3
+app.get('/lista_vehiculos', (req, res) => vehiculos.listavehiculos(con,req,res));
 app.get('/lista_vehiculos_por_id_usuario', (req, res) => vehiculos.listavehiculosporidusuario(con,req,res));
     
 //4
 app.get('/vehiculo_por_id_vehiculo', (req, res) => vehiculos.vehiculo_por_id_vehiculo(con,req,res));
 
 //5
+app.get('/lista_servicios', (req, res) => servicios.lista_servicios(con,req,res)); 
 app.get('/lista_servicios_por_id_vehiculo', (req, res) => servicios.lista_servicios_por_id_vehiculo(con,req,res)); 
 
 //6

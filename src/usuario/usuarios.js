@@ -60,42 +60,42 @@ function eliminar_usuario(con,req,res,) {
 }
 exports.eliminar_usuario = eliminar_usuario;
 
-function usuarioporid(con,req,res,) {
-    var usuario = req.query.id_usuario;//esta variable recibe el parametro que pedimos por URL
-    con.query("SELECT * FROM usuario where id_usuario="+usuario, function (err, result) {
-        if (err) throw err;
-        res.json(result);
-        console.log("Result: " +  JSON.stringify(result,null,2));
-    });
-}
-exports.usuarioporid = usuarioporid;
+// function usuarioporid(con,req,res,) {
+//     var usuario = req.query.id_usuario;//esta variable recibe el parametro que pedimos por URL
+//     con.query("SELECT * FROM usuario where id_usuario="+usuario, function (err, result) {
+//         if (err) throw err;
+//         res.json(result);
+//         console.log("Result: " +  JSON.stringify(result,null,2));
+//     });
+// }
+// exports.usuarioporid = usuarioporid;
 
-function usuarioporid(con,req,res,) {
-    var usuario = req.query.id_usuario;//esta variable recibe el parametro que pedimos por URL
-    con.query("SELECT * FROM usuario where id_usuario="+usuario, function (err, result) {
-        if (err) throw err;
-        res.json(result);
-        console.log("Result: " +  JSON.stringify(result,null,2));
-    });
-}
-exports.usuarioporid = usuarioporid;
+// function usuarioporid(con,req,res,) {
+//     var usuario = req.query.id_usuario;//esta variable recibe el parametro que pedimos por URL
+//     con.query("SELECT * FROM usuario where id_usuario="+usuario, function (err, result) {
+//         if (err) throw err;
+//         res.json(result);
+//         console.log("Result: " +  JSON.stringify(result,null,2));
+//     });
+// }
+// exports.usuarioporid = usuarioporid;
 
-function usuarioporid(con,req,res,) {
-    var usuario = req.query.id_usuario;//esta variable recibe el parametro que pedimos por URL
-    con.query("SELECT * FROM usuario where id_usuario="+usuario, function (err, result) {
-        if (err) throw err;
-        res.json(result);
-        console.log("Result: " +  JSON.stringify(result,null,2));
-    });
-}
-exports.usuarioporid = usuarioporid;
+// function usuarioporid(con,req,res,) {
+//     var usuario = req.query.id_usuario;//esta variable recibe el parametro que pedimos por URL
+//     con.query("SELECT * FROM usuario where id_usuario="+usuario, function (err, result) {
+//         if (err) throw err;
+//         res.json(result);
+//         console.log("Result: " +  JSON.stringify(result,null,2));
+//     });
+// }
+// exports.usuarioporid = usuarioporid;
 
-function usuarioporid(con,req,res,) {
-    var usuario = req.query.id_usuario;//esta variable recibe el parametro que pedimos por URL
-    con.query("SELECT * FROM usuario where id_usuario="+usuario, function (err, result) {
-        if (err) throw err;
-        res.json(result);
-        console.log("Result: " +  JSON.stringify(result,null,2));
-    });
-}
-exports.usuarioporid = usuarioporid;
+// function usuarioporid(con,req,res,) {
+//     var usuario = req.query.id_usuario;//esta variable recibe el parametro que pedimos por URL
+//     con.query("SELECT * FROM usuario where id_usuario="+usuario, function (err, result) {
+//         if (err) throw err;
+//         res.json(result);
+//         console.log("Result: " +  JSON.stringify(result,null,2));
+//     });
+// }
+// exports.usuarioporid = usuarioporid;

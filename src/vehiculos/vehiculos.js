@@ -1,3 +1,13 @@
+function listavehiculos(con,req,res,) {
+    var usuario = req.query.id_usuario;//esta variable recibe el parametro que pedimos por URL
+    con.query("SELECT * FROM vehiculo", function (err, result) {
+        if (err) throw err;
+        res.json(result);
+        console.log("Result: " +  JSON.stringify(result,null,2));
+    });
+}
+exports.listavehiculos = listavehiculos;
+
 function listavehiculosporidusuario(con,req,res,) {
     var usuario = req.query.id_usuario;//esta variable recibe el parametro que pedimos por URL
     con.query("SELECT * FROM vehiculo where id_usuario="+usuario, function (err, result) {

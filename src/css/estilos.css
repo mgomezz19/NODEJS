@@ -1,0 +1,113 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+body{
+    background: url(../img/fondo-coche.jpg) no-repeat center top;
+    background-size:auto;
+    height: 100vh;
+}
+header{
+    display: flex;
+    background-color:rgb(27, 56, 150, 0.75);
+    color:black;
+    margin-bottom: 2%;
+    text-align: center;
+    height: 10vh;
+    line-height: 10vh;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#boton_cerrar_sesion{
+    cursor: pointer;
+    background:    skyblue;
+    border:        5px initial;
+    border-radius: 11px;
+    padding:       5px 15px;
+    color:         black    ;
+    display:       inline-block;
+    font:          normal bold 16px/1 "Open Sans", sans-serif;
+    text-align:    center;
+}
+
+img{
+    height: 97%;
+    opacity: 100%;
+    margin-top: 1px;
+}
+
+.container{
+    display: grid;
+    margin: auto;
+    grid-gap: 5px;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+input{
+    margin-bottom: 5px;
+}
+
+h1{
+    font-size: 3.5rem;
+}
+h2{
+    margin-left: 32px;
+}
+h3{
+    margin: 5px;
+    color: white;
+    font-size: 2.5rem;
+    -webkit-text-stroke: 1.5px black;
+}
+#contenedor{
+    margin-left: 25%;
+    margin-top: 3%;
+    background-color: rgb(8, 98, 150);
+    width: max-content;
+    border: 2px, solid, black;
+    border-radius: 20px;
+}
+#contenedor div{
+    border: 2px solid #333;
+    border-radius: 6px;
+    margin: 1rem;
+    padding: 1rem;
+    display: inline-block;
+    background-color:rgb(246, 255, 255);
+}
+
+#contenedor div p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #333;
+}
+input{
+    cursor: pointer;
+    margin: 0.9rem;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: skyblue;
+}
+.inputses{
+    margin-left: 35%;
+    margin-top: -1%;
+}
+iframe{
+    margin-top: 1%;
+    width: 50%;
+    height: 40vh;
+}
+.id{
+    margin-left: 40%;
+    margin-top: 5%;
+}
